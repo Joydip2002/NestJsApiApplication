@@ -1,6 +1,7 @@
 import { HttpException, Injectable ,HttpStatus } from '@nestjs/common';
 import { resolve } from 'path';
 import { CarsMockdata } from './cars.mock';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 @Injectable()
 export class CarService {
     private cars = CarsMockdata;
@@ -59,7 +60,7 @@ export class CarService {
           if (index == -1) {
             throw new HttpException( 'Not Found', 404);
           }
-          this. cars [index] [propertyName] = propertyValue;
+          this.cars [index] [propertyName] = propertyValue;
           return resolve(this.cars);
        });
     }

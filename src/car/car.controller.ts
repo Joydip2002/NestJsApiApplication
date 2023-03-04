@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { CarService } from './car.service';
 import { carDto } from './car.dto';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { query } from 'express';
 @Controller('cars')
 export class CarController {

@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CarController } from './car.controller';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 describe('CarController', () => {
   let controller: CarController;
